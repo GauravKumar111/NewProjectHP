@@ -1,0 +1,4 @@
+<aura:component >
+    <h1> Hi gaurav How are you!</h1>
+	
+</aura:component>

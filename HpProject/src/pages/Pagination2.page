@@ -1,0 +1,30 @@
+<apex:page controller="PaginationController">
+<apex:form >
+<apex:pageblock >
+    <apex:pageblockButtons location="Top">
+        <apex:outputPanel id="myButtons">
+            <apex:commandButton value="Beginning" action="{!Beginning}" disabled="{!disabledPrevious}" reRender="myButtons,myPanel"/>
+            <apex:commandButton value="Previous" action="{!Previous}" disabled="{!disabledPrevious}" reRender="myButtons,myPanel"/>
+            <apex:commandButton value="Next" action="{!Next}" disabled="{!disabledNext}" reRender="myButtons,myPanel"/>
+            <apex:commandButton value="End" action="{!End}" disabled="{!disabledNext}" reRender="myButtons,myPanel"/>
+        </apex:outputPanel>
+    </apex:pageblockButtons>
+    <apex:pageblockSection >
+        <apex:outputPanel id="myPanel">
+            <apex:PageBlockTable var="c1" value="{!cnd}">
+                <apex:column headerValue="Name">
+                    <apex:inputField value="{!c1.Name}"/>
+                </apex:column>
+                <apex:column headerValue="Last Name">
+                    <apex:inputField value="{!c1.AccountNumber}"/>
+                </apex:column>
+                <apex:column headerValue="City">
+                    <apex:inputField value="{!c1.Industry}"/>
+                </apex:column>
+                <apex:facet name="footer">Showing Page # {!pageNumber} of {!totalPages}</apex:facet>
+            </apex:PageBlockTable>            
+        </apex:outputPanel>
+    </apex:pageblockSection>
+</apex:pageblock>
+</apex:form>
+</apex:page>

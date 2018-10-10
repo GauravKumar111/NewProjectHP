@@ -1,0 +1,22 @@
+<apex:page controller="CandidateListClass">
+    <apex:form >
+        <apex:pageBlock title="Candidate" id="Can">
+            
+          <!-- Contacts List -->
+            <apex:pageBlockTable value="{! CandidateList}" var="ca">
+
+                <apex:column value="{! ca.First_Name__c}"/>
+                <apex:column value="{! ca.Education__c}"/>
+                <apex:column value="{! ca.City__c}"/>
+                <apex:column value="{! ca.State__c}"/>
+    
+            </apex:pageBlockTable>
+          
+          
+
+          
+
+          
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

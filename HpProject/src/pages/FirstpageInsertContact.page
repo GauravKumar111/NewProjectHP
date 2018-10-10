@@ -1,0 +1,24 @@
+<apex:page standardController="Contact" sidebar="false" showheader="false">
+    <apex:form >
+        
+        <apex:pageBlock title="Edit Contact">
+
+            <apex:pageBlockSection columns="1">
+                <apex:inputField value="{!Contact.FirstName}"/>
+                <apex:inputField value="{!Contact.LastName}"/>
+                <apex:inputField value="{!Contact.Email}"/>
+                <apex:inputField value="{!Contact.Birthdate}"/>
+               
+                <apex:inputField value="{!Contact.Department}"/>
+                 <apex:inputField value="{!Contact.Description}"/>
+                 <apex:inputField value="{!Contact.Salary__c}"/>
+            </apex:pageBlockSection>
+
+            <apex:pageBlockButtons >
+                <apex:commandButton action="{!save}" value="Save to insert"/>
+            </apex:pageBlockButtons>
+
+        </apex:pageBlock>
+        
+    </apex:form>
+</apex:page>

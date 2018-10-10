@@ -1,0 +1,4 @@
+<apex:page >
+    <div id="container1"></div>
+    <apex:canvasApp applicationName="myApp" containerId="container1"/>
+</apex:page>

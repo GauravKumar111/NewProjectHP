@@ -1,0 +1,23 @@
+<apex:page standardController="Job_Application__c" recordSetVar="Job_Application__c">
+    <apex:form >
+
+        <apex:pageBlock title="Job Applications List" id="id1">
+        
+            Filter: 
+            <apex:selectList value="{! filterId }" size="1">
+                <apex:selectOptions value="{! listViewOptions }"/>
+               <apex:actionSupport event="onchange" reRender="id1"/>  
+            </apex:selectList>
+
+            <!-- Contacts List -->
+            <apex:pageBlockTable value="{! Job_Application__c }" var="jt">
+                <apex:column value="{! jt.Name }"/>
+                <apex:column value="{! jt.Candidate__c }"/>
+                <apex:column value="{! jt.Position__c }"/>
+               
+           </apex:pageBlockTable>
+            
+        </apex:pageBlock>
+
+    </apex:form>
+</apex:page>

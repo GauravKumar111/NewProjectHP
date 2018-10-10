@@ -1,0 +1,13 @@
+<apex:page standardController="Candidate__c" recordSetVar="Candidate__c">
+    <apex:pageBlock title="Candidate List">
+        
+        <!-- Contacts List -->
+        <apex:pageBlockTable value="{! Candidate__c }" var="cd">
+            <apex:column value="{! cd.Name }"/>
+            <apex:column value="{! cd.Education__c }"/>
+            <apex:column value="{! cd.Email__c }"/>
+            <apex:column value="{! cd.City__c }"/>
+        </apex:pageBlockTable>
+        
+    </apex:pageBlock>
+</apex:page>

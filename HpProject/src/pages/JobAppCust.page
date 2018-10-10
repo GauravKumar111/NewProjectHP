@@ -1,0 +1,29 @@
+<apex:page controller="JobAppListController">
+    <apex:form >
+        <apex:pageBlock title="Job Application List" id="JobApplication">
+            
+          <!-- Contacts List -->
+            <apex:pageBlockTable value="{! JobAppList}" var="ja">
+
+                <apex:column value="{! ja.Candidate__c }"/>
+                <apex:column value="{! ja.Position__c }"/>
+                <apex:column value="{! ja.Status__c }"/>
+                <apex:column value="{! ja.Total_Rating__c }"/>
+    
+            </apex:pageBlockTable>
+          
+          
+          <apex:commandButton value="Redirect To My First VF Page"  action="{!redirecttoFirstVfPage}"/>
+          
+          <apex:commandButton value="Redirect To Std List Controller"  action="{!redirecttoStdListController}"/>
+          
+          
+          
+                    <apex:commandButton value=" Send MAil to Contact"  action="{!SendEmail}"/>
+
+          
+
+          
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

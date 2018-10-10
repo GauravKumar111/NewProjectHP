@@ -1,0 +1,53 @@
+<aura:component controller="SaveRegistrationFormDetails" implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global" >
+    <aura:attribute name="InstituteName"    type="string"      default=""/>
+    <aura:attribute name="CourseName"       type="string"      default=""/>
+    <aura:attribute name="DurationOfCourse" type="string"      default=""/> 
+    <aura:attribute name="NoFHrsStudy"      type="string[]"   default=" ,Less than 35%,In Between 35% to 65%,In Between 65% to 80%,Above 80%"/> 
+    <aura:attribute name="OverallScore"     type="string"     default=""/>
+    <aura:attribute name="PageSubHeading"     type="string"   default="Your Educational Detials->"/>
+    <aura:attribute name="EducationDetailListInnerComponent"  type="List" />
+    <aura:attribute name="indexNo"  type="Integer" />
+    <aura:attribute name="SequenceNo"  type="Integer" />  
+    <aura:handler name="init" value="{!this}" action="{!c.doinit}" />
+    <aura:handler name="change" value="{!v.indexNo}" action="{!c.changeInIndexNo}" />
+    <aura:handler name="change" value="{!v.RegistrationRecordId}" action="{!c.saveEduDetails}" /> 
+    <aura:attribute name="EduDetails" type="EducationDetail__c" default="{'sobjectType':'EducationDetail__c'}" />
+    <aura:attribute name="RegistrationRecordId" type="String" />
+    
+     
+    <div class="slds-m-top--xx-large">
+        <div class="slds-page-header">
+            <div class="slds-align_absolute-center">
+                <div class="slds-text-heading_large">
+                    
+                  {!v.PageSubHeading}    {!v.SequenceNo}
+                </div>
+            </div>
+    </div>
+    </div> 
+    <br/>  <br/>
+    <lightning:input label="Enter your institute Name" name="InstituteName" value="{!v.EduDetails.Name}"/>
+    <br/>
+    <lightning:input label="Enter your Course Name" name="CourseName" value="{!v.EduDetails.Course_Name__c}"/>
+    <br/>
+    <lightning:input label="Enter your Course Duration(in years)" name="CourseDuration" value="{!v.EduDetails.Course_Duration__c}"/>
+    <br/>
+    <lightning:select label="What your overall Score in this course?" name="OverallScore" value="{!v.EduDetails.Overall_Score__c}">
+      
+        <aura:iteration items="{!v.NoFHrsStudy}" var="hrs">
+            <option value="{!hrs}" text="{!hrs}"/>
+        </aura:iteration>
+    
+    </lightning:select>
+    <br/>
+    
+    <lightning:button iconName="utility:delete" variant="border-filled" label="Delete this Education Details" onclick="{!c.deleteDetails}">
+    </lightning:button>
+    
+    
+    
+    
+    
+    
+    
+</aura:component>

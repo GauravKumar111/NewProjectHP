@@ -1,0 +1,18 @@
+<apex:page controller="p2">
+ <apex:form >
+ <apex:pageBlock >
+ <apex:pageBlockSection >
+ <apex:inputField value="{!acc.name}" />
+ <apex:inputField value="{!acc.type}" />
+ <apex:inputField value="{!acc.phone}" />
+ <apex:inputField value="{!acc.industry}" />
+  <apex:commandButton value="store" action="{!save}"/>
+  <apex:commandButton value="edit" action="{!edit}"/>
+ </apex:pageBlockSection>
+
+
+ 
+
+ </apex:pageBlock>
+ </apex:form>
+</apex:page>

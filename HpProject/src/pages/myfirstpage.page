@@ -1,0 +1,48 @@
+<apex:page standardController="Student__c" sidebar="false" showHeader="false">
+<apex:form >
+  <h1>Congratulations</h1> <br/> <br/>
+  
+  <h2> Welcome to Salesforce </h2>  <br/> <br/>
+  This is your new first Page
+  
+  <apex:pageBlock title="MY First Block">
+     <apex:pageBlockSection >
+     jdflksjdfsd
+     </apex:pageBlockSection>
+     
+     
+  </apex:pageBlock>
+  
+  
+  <apex:pageBlock title="MY Second Block">
+     
+  dsfkj;lsdkflskdf
+  </apex:pageBlock>
+  
+  
+  <apex:pageBlock title="MY Third Block">
+     fsdkfjdfdsfsdf
+  
+  </apex:pageBlock>
+  
+  
+  <apex:pageblock title="Standard Controller part">
+  
+  Student Name: <apex:inputfield value="{!Student__c.Name}" /> <br/>
+  Student Roll No : <apex:inputfield value="{!Student__c.Roll_Number__c}" /> <br/>
+  Student Date of Birth: <apex:inputfield value="{!Student__c.DOB__c}" />
+  
+   <apex:commandButton value="Save the Student" action="{!Save}"/> <br/> <br/>
+
+  
+  </apex:pageblock>
+  
+  <apex:commandButton value="MY Button for Submit" action="http://www.google.com"/> <br/> <br/>
+ 
+  <apex:outputLabel >Enter Name     </apex:outputLabel>
+ <apex:inputText />
+ 
+ 
+ 
+</apex:form>  
+</apex:page>

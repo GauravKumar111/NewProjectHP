@@ -1,0 +1,9 @@
+.THIS {
+}
+.THIS.slds-size_3-of-8{
+    margin-left: 400px;
+}
+.THIS label.slds-form-element__label{
+    font-size: 1.00rem;
+    color: blue;
+}

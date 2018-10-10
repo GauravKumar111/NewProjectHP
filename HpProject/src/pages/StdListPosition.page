@@ -1,0 +1,13 @@
+<apex:page standardController="Position__c" recordSetVar="Position__c">
+    <apex:pageBlock title="Candidate List">
+        
+        <!-- Contacts List -->
+        <apex:pageBlockTable value="{! Position__c}" var="ps">
+            <apex:column value="{! ps.Name }"/>
+            <apex:column value="{! ps.Type__c}"/>
+            <apex:column value="{! ps.Hire_Date__c}"/>
+            <apex:column value="{! ps.Max_Pay__c}"/>
+        </apex:pageBlockTable>
+        
+    </apex:pageBlock>
+</apex:page>

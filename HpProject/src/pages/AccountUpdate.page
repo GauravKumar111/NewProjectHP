@@ -1,0 +1,16 @@
+<apex:page standardController="Account" extensions="AccountUpdateController">
+  <apex:form >
+    <apex:pageBlock title="Account Update"  id="Account" mode="edit">
+      <apex:pageBlockButtons >
+        <apex:commandButton action="{!save}" value="Save"/>
+      </apex:pageBlockButtons>
+      <apex:pageBlockTable value="{! Account}" var="acc">
+
+                <apex:column value="{! acc.Name}"/>
+                <apex:column value="{! acc.AccountNumber}"/>
+                <apex:column value="{! acc.Industry}"/>
+                <apex:column value="{! acc.Phone}"/>
+            </apex:pageBlockTable>
+    </apex:pageBlock>
+  </apex:form>
+</apex:page>

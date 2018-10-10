@@ -1,0 +1,14 @@
+<apex:page controller="p1">
+<apex:form >
+<apex:pageBlock >
+
+<apex:pageBlockTable value="{!acc}" var="a">
+<apex:column value="{!a.name}"/>
+<apex:column value="{!a.phone}"/>
+<apex:column value="{!a.type}"/>
+<apex:column value="{!a.Industry}"/>
+
+</apex:pageBlockTable>
+</apex:pageBlock>
+</apex:form>
+</apex:page>

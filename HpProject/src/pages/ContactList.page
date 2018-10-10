@@ -1,0 +1,11 @@
+<apex:page controller="ConListController">
+    <apex:pageBlock title="Candidate List">
+        
+        <!-- Contacts List -->
+        <apex:pageBlockTable value="{! conList}" var="ps">
+            <apex:column value="{! ps.Name }"/>
+            <apex:column value="{! ps.id}"/>
+        </apex:pageBlockTable>
+        
+    </apex:pageBlock>
+</apex:page>

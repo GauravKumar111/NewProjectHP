@@ -1,0 +1,79 @@
+<aura:component  implements="force:appHostable,flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId,forceCommunity:availableForAllPageTypes,force:lightningQuickAction" access="global"> 
+<aura:attribute name="contact" type="Contact" default="{ 'sobjectType' : 'Contact' }" />
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="standard:scan_card" alternativeText="Contact Info"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">Contact Info</h1>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+    <ui:inputSelect aura:id="picklist"  label="Suffix" > 
+    <ui:inputSelectoption  label="Mr." text="Mr."/> 
+     <ui:inputSelectoption  label="Mrs." text="Mrs."/> 
+    </ui:inputSelect>   
+    <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <span>
+                <lightning:input aura:id="First Name" label="First Name" 
+                                 name="First Name" 
+                                 value="{!v.FirstName}" />
+                <lightning:input aura:id="Last Name"  label="Last Name" 
+                                 name="Last Name" 
+                                 value="{!v.LastName}" 
+                                 required="true"/>
+            </span>
+        </div>
+        <div class="slds-col">
+            <span>
+                <lightning:input aura:id="Mobile" label="Mobile" 
+                                 name="Mobile" 
+                                 value="{!v.Mobile}"/>
+                <lightning:input aura:id="Phone"  label="Phone" 
+                                 name="Phone" 
+                                 value="{!v.Phone}"/>
+            </span>
+        </div>
+    </div>
+    <lightning:layout class="slds-page-header slds-page-header--object-home">
+        <lightning:layoutItem>
+            <lightning:icon iconName="standard:scan_card" alternativeText="Address"/>
+        </lightning:layoutItem>
+        <lightning:layoutItem padding="horizontal-small">
+            <div class="page-section page-header">
+                <h1 class="slds-text-heading--label">Address</h1>
+            </div>
+        </lightning:layoutItem>
+    </lightning:layout>
+       <div class="slds-grid slds-gutters">
+        <div class="slds-col">
+            <span>
+                <lightning:input aura:id="Mailing Address" label="Mailing Address" 
+                                 name="Mailing Address" 
+                                 value="{!v.MailingAddress}" />
+                <lightning:input aura:id="Shipping Address" label="Shipping Address" 
+                                 name="Shipping Address" 
+                                 value="{!v.ShippingAddress}" 
+                                 required="true"/>
+            </span>
+        </div>
+        <div class="slds-col">
+            <span>
+                <lightning:input aura:id="Other Address" label="Other Address" 
+                                 name="Other Address" 
+                                 value="{!v.OtherAddress}"/>
+                <lightning:input aura:id="Fax"  label="Fax" 
+                                 name="Fax" 
+                                 value="{!v.Fax}"/>
+            </span>
+        </div>
+    </div>
+    <div>
+        <lightning:input type="checkbox" aura:id="Permanent Address Same" label="Permanent Address Same"  
+                             name="Permanent Address Same"
+                             checked="{!v.PermanentAddressSame}"/>
+    </div>
+   
+</aura:component>
